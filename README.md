@@ -1,3 +1,3 @@
 # inClass
 Paragraph with *some* **stuff** in it
-md is markdown
+, md is markdown
