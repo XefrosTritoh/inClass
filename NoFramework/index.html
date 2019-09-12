@@ -4,15 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>JQuery Demo</title>
 </head>
 <body>
     
+<div class="container">
+<div class="row">
+    <div class="col">
+        <h1 id="first"> JQuery Demo</h1>
+        <h1 id="second"> 2nd header</h1>
+    </div>
+</div>
 
-<h1 id="first"> JQuery Demo</h1>
-<h1 id="second"> 2nd header</h1>
+<div class="row">
+    <div class="col">
+        <div class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+          </div>
+    </div>
+
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.youtube.com/" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col" id="alertCol">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary" id="new">Secondary</button>
+    </div>
+    <div class="col"></div>
+    <div class="col"></div>
+</div>
+
+</div>
+
+
+
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
    $ = jQuery 
  $(function(){
@@ -22,18 +64,18 @@
     //{} <-- javascript object
     //{ color : "red"}
     //{ "background-color" : "red"} '-' doesnt work in JS, must use double quotes
-
     let size =  32
 
-    $("h1#first").on('click', function(){
-        //clicking the 1st header turns the background of the 2nd red
+    $("#new").on('click', function(){        
 
-        size += 10;
-
-        $("h1#second").css({ backgroundColor: "red" , fontSize:size })
-
-        
-
+        console.log({
+            theAlert:$(".alert"),
+            theCol: $("#alertCol")
+            //need a '#' for ids
+        }); 
+            
+        $(".alert").eq(0).clone().text("Text")
+        .appendTo("#alertCol");
     })
  })
     
