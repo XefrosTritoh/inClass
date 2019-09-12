@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery Demo</title>
+</head>
+<body>
+    
+
+<h1 id="first"> JQuery Demo</h1>
+<h1 id="second"> 2nd header</h1>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+   $ = jQuery 
+ $(function(){
+    //Passes reference of funtion
+    //$("h1").css({ backgroundColor: "red" , color: "white"})
+    //json: javaScript object notion
+    //{} <-- javascript object
+    //{ color : "red"}
+    //{ "background-color" : "red"} '-' doesnt work in JS, must use double quotes
+
+    let size =  32
+
+    $("h1#first").on('click', function(){
+        //clicking the 1st header turns the background of the 2nd red
+
+        size += 10;
+
+        $("h1#second").css({ backgroundColor: "red" , fontSize:size })
+
+        
+
+    })
+ })
+    
+
+</script>
+</body>
+</html>
