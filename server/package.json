@@ -1,0 +1,20 @@
+{
+  "name": "in-class",
+  "version": "1.0.0",
+  "description": "WebProgramming inClass",
+  "main": "index.js",
+  "scripts": {
+    
+
+  },
+  "author": "Angel-Figueroa",
+  "license": "ISC",
+
+  "dependencies": {
+   "express": "4.17.1" 
+  },
+
+  "devDependencies": {
+
+  }
+}
