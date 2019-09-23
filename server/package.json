@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "WebProgramming inClass",
   "main": "index.js",
-  "scripts": {},
-  "author": "Angel-Figueroa",
   "license": "ISC",
+  "author": "Angel-Figueroa",
+
+  "scripts": {
+    "start": "node index.js"
+  } ,
+ 
+  
   "dependencies": {
     "express": "^4.17.1"
   },
