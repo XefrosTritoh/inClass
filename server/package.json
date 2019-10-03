@@ -5,12 +5,9 @@
   "main": "index.js",
   "license": "ISC",
   "author": "Angel-Figueroa",
-
   "scripts": {
     "start": "nodemon index.js"
-  } ,
- 
-  
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
