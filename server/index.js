@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 app
 
     .get('/port' , (req,res) => res.send("Using Port: " + port))
-    .get('/sql' , (req,res) => res.send(proces.env.MYSQLCONNSTR_localdb))
+    .get('/sql' , (req,res) => res.send(process.env.MYSQLCONNSTR_localdb))
     .use('/static', express.static(path.join(__dirname, '../NoFramework'))) 
             //static sends back html only
             //must reference path variable
