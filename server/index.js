@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 //middleware
 app
 
-    .get('./port' , (req,res) => res.send("Using Port: " + port))
+    .get('/port' , (req,res) => res.send("Using Port: " + port))
     .use('/static', express.static(path.join(__dirname, '../NoFramework'))) 
             //static sends back html only
             //must reference path variable
