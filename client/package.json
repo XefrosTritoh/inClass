@@ -8,6 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bulma": "^0.8.0",
+    "@fortawesome/fontawesome-free": "^5.11.2", 
     "core-js": "^3.1.2",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6"
@@ -31,8 +33,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "@vue/airbnb"
+      "plugin:vue/essential"
     ],
     "rules": {},
     "parserOptions": {
