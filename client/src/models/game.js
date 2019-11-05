@@ -1,8 +1,13 @@
 import Caption_Deck from "./Captions"
 
 export const Game_Server = {
-    Player: [],
-    Picture_Deck: [],
+    Players: [],
+    Picture_Deck: [
+        "http://www.dailyhaha.com/_pics/prepared-to-slice-onions.jpg",
+        "http://www.dailyhaha.com/_pics/no-parking-here-guys.jpg",
+        "http://www.dailyhaha.com/_pics/best-parking-spot.jpg",
+        "http://www.dailyhaha.com/_pics/a-good-selling-point.jpg",
+    ],
     Caption_Deck,
     Top_Of_Caption_Deck: 0,
     Top_Of_Picture_Deck: 0,
@@ -23,7 +28,7 @@ export const Game_Server = {
 }
 
 export const Game_Client = {
-    Player: [
+    Players: [
         { name:"Xefros", points: 0 },
         { name:"Joey", points: 0 },
         { name:"Jude", points: 0 },
@@ -36,7 +41,10 @@ export const Game_Client = {
     Caption_chosen: -1
 }
 
-export var My_Captions = [];
+export var My_Captions = [
+
+
+];
 
 
 export class Player{
