@@ -1,18 +1,20 @@
 const express = require('express');
-const users = require('../Models/users');
+const { Game } = require('../Models/Game');
 const app = express.Router();
 
-const game = {
-    users: [],
-    pictureCards: [],
-    wordCards: [],
-    
-    dealer: 0
-}
 
-app.post('/join', (req,res) =>{
-    const userId = req.query.userId
-    game.users.push(user[userId]);
+
+app.get('/', (req,res) =>{
+    res.send(Game.Get_State())
 })
+
+    .get('/hand', (req,res) =>{
+        res.send(Game.Get_Hand())
+    })
+
+    .get('/picture/flip', (req,res) =>{
+        Game.Flip_Picture()
+        res.send({ success: true, url: Game.Picture_in_play})
+    })
 
 module.exports = app;
