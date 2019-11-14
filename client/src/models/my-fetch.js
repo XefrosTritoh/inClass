@@ -1,10 +1,23 @@
 const api_root = "http://localhost:3000/game/";
 
-export async function api(url){ 
-    const response = await fetch(api_root + url)
+export async function api(url, data){ 
+    let response;
+
+
+    if(data){
+
+    }else{
+        response = await fetch(url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
+          });
+    }
+
     if(response.ok)
         return await response.json();
     else{
-        throw response.json
+        throw response.json();
     }
 }

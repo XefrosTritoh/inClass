@@ -16,7 +16,7 @@ app.use(function(req, res, next) {
 //match paths to functions( ex: /static, express fucntion)
 //middleware
 app
-
+    .use(express.json())
     .get('/port' , (req,res) => res.send("Using Port: " + port))
     .get('/sql' , (req,res) => res.send(process.env.MYSQLCONNSTR_localdb))
     .use('/static', express.static(path.join(__dirname, '../NoFramework'))) 
