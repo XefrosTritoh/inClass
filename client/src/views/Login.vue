@@ -32,13 +32,14 @@
 </template>
 
 <script>
+import { Game_Server } from "../models/Game";
 export default {
     data: ()=>({
         name: ""
     }),
     methods: {
         join(){
-
+            Game_Server.Join(this.name)
         }
     }
 
