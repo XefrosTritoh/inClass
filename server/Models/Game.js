@@ -1,4 +1,5 @@
 const Caption_Deck = require('./Captions')
+const { CustomError } = require('./Custom_Error');
 
 
 module.exports.Game = {
@@ -33,7 +34,7 @@ module.exports.Game = {
     },
     Join(name){
         if(this.Players.find(x=> x.name == name)){
-            return -1;
+            throw new CustomError(409, "Username Taken")
         }
         this.Players.push( {name , score: 0 });
         return this.Players.length-1;

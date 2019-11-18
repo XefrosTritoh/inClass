@@ -20,11 +20,7 @@ app.get('/', (req,res) =>{
         
     .post('/players', (req,res) =>{
         const playerID = Game.Join(req.body.name);
-        if(playerID == -1){
-            res.status(500).send({ success: false, message: "Invalid Name"})
-        }else{
             res.send({ success: true, playerID})
-        }
     })
 
 module.exports = app;

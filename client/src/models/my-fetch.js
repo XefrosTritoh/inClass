@@ -5,7 +5,7 @@ export async function api(url, data){
 
 
     if(data){ 
-        response = await fetch(url, {
+        response = await fetch(api_root + url, {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
             headers: { 'Content-Type': 'application/json' },
@@ -18,6 +18,6 @@ export async function api(url, data){
     if(response.ok)
         return await response.json();
     else{
-        throw response.json();
+        throw await response.json();
     }
 }
