@@ -52,7 +52,6 @@ export default {
     methods: {
         join(){
             Game_Server.Join(this.name)
-                .then(x=> this.$router.push( { name: 'game'} ) )
                 .catch(err=> {
                     console.error(err);
                     this.error = err.message;
